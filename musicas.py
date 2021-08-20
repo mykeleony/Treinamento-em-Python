@@ -1,3 +1,8 @@
+'''
+Programa que armazena diversas informações de todas as músicas de uma playlist (nesse caso, do Apple Music) em um banco de dados.
+Myke Leony dos Santos Amorim. 08 de maio de 2021.
+'''
+
 import xml.etree.ElementTree as ET
 import sqlite3
 
