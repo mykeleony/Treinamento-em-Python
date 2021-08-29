@@ -6,7 +6,19 @@ Introdução à Análise de Algoritmos - Sistemas de Informação: USP.
 
 lista_num = input('Insira os números (separados por espaços): ').split(' ')
 
-vetor_a_ordenar = lista_num[1:]
+vetor = list(map(int, lista_num))
 
-for numero in vetor_a_ordenar:   # Iniciando o loop no a partir do segundo elemento.
-    print(numero)
+print('Números desordenados:', vetor)
+
+for indice in range(1, len(vetor)):
+
+     key = int(vetor[indice])
+     posicao = indice
+
+     while posicao > 0 and vetor[posicao-1] > key:
+         vetor[posicao] = vetor[posicao-1]
+         posicao = posicao-1
+
+     vetor[posicao] = key
+
+print('Números ordenados: ', vetor)
