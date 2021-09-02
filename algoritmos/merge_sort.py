@@ -1,3 +1,10 @@
+'''
+Programa que utiliza o algoritmo Merge Sort, retirado do livro "Introduction to Algorithms" para ordenar uma sequência aleatória de números em Python.
+O algoritmo, em adição à proposta da literatura, esclarece o processo com mensagens informativas na tela.
+Myke Leony dos Santos Amorim. 01 de setembro de 2021.
+Introdução à Análise de Algoritmos - Sistemas de Informação: USP.
+'''
+
 import sys
 import random
 
