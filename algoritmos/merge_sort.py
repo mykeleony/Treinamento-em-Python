@@ -56,6 +56,7 @@ def merge_sort (vetornumeros):
     print("Intercalando ", vetornumeros)
 
 if __name__ == '__main__':
+    # Testagem de exemplos:
     tamanho = 10
     exemplo = criar_vetor(tamanho)
 
