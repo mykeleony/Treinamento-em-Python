@@ -48,6 +48,7 @@ def merge_sort (vetornumeros):
             i += 1
             k += 1
 
+        # Combinando os vetores separados:
         while j < len(R):
             vetornumeros[k] = R[j]
             j += 1
