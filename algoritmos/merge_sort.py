@@ -1,6 +1,5 @@
 '''
 Programa que utiliza o algoritmo Merge Sort, retirado do livro "Introduction to Algorithms" para ordenar uma sequência aleatória de números em Python.
-O algoritmo, em adição à proposta da literatura, esclarece o processo com mensagens informativas na tela.
 Myke Leony dos Santos Amorim. 01 de setembro de 2021.
 Introdução à Análise de Algoritmos - Sistemas de Informação: USP.
 '''
@@ -21,16 +20,18 @@ def merge_sort (vetornumeros):
     print("Separando", vetornumeros)
 
     if len(vetornumeros) > 1:
-        meio = len(vetornumeros)//2
+        meio = len(vetornumeros)//2     # O operador piso (//) é necessário para evitar o retorno de pontos flutuantes.
 
-        L = vetornumeros[:meio]
-        R = vetornumeros[meio:]
+        L = vetornumeros[:meio]         # Metade esquerda do vetor.
+        R = vetornumeros[meio:]         # Metade direita do vetor.
 
+        # Utilizando recursividade para separar todas as metades possíveis do vetor:
         merge_sort(L)
         merge_sort(R)
 
         i = j = k = 0
 
+        # Ordenando os números dentro dos vetores:
         while i < len(L) and j < len(R):
             if L[i] < R[j]:
                 vetornumeros[k] = L[i]
