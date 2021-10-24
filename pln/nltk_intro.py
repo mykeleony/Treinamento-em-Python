@@ -1,5 +1,5 @@
 '''
-Programa que realiza manipulações elementares no Natural Language ToolKit.
+Programa que realiza manipulações elementares em ferramentas do pacote Natural Language ToolKit.
 Myke Leony dos Santos Amorim. 15 de setembro de 2021.
 Curso: Python para Processamento de Linguagem Natural - Instituto de Ciências Matemáticas e de Computação (USP).
 '''
