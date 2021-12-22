@@ -10,7 +10,7 @@ class Poligono:
         for i in range (self.n):
             print('O lado', str(i+1), 'vale', self.lados[i])
 
-class Triangulo:
+class Triangulo (Poligono):
     def __init__(self):
         Poligono.__init__(self, 3)
 
