@@ -40,6 +40,10 @@ class Retangulo (Poligono):
     def diagonal (self):
         diagonal = (self.lados[0]**2 + self.lados[1]**2)**0.5
 
+def TrianguloRetangulo (Triangulo):
+    def eh_triangulo_retangulo(self):
+        return (self.lados[0]**2 == self.lados[1]**2+self.lados[2]**2 or self.lados[1]**2 == self.lados[0]**2+self.lados[2] or self.lados[2] == self.lados[0]**2+self.lados[1]**2)
+
 # Testagens:
 pentagono = Poligono(5)
 pentagono.le_lados()
