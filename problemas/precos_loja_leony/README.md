@@ -12,7 +12,7 @@ Seu trabalho é, a partir de uma lista de produtos, de uma lista dos preços des
 - **Produtos**: vetor de *strings*
 -  **Preços dos produtos:** vetor de decimais
 - **Produtos vendidos**: vetor de *strings*
-- **Preços dos produtos vendidos: ** vetor de decimais
+- **Preços dos produtos vendidos:** vetor de decimais
 
 ---
 #### Retorno
