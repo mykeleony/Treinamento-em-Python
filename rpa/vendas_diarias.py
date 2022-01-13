@@ -17,7 +17,7 @@ import pandas as pd
 
 
 def main():
-    pyautogui.PAUSE = 0.75
+    pyautogui.PAUSE = 0.75  # Intervalo entre os comandos de controle de teclado e mouse.
 
     webbrowser.open_new_tab('https://drive.google.com/drive/folders/14oLE59U1RqyRqlBbKpsyymW-mitvbtoh')
 
@@ -49,7 +49,7 @@ def main():
     pyautogui.typewrite(['tab', 'tab'], interval=0.5)
     pyautogui.write(f'Faturamento e quantidade de produtos vendidos em {date.today()}')     # Assunto do e-mail.
     pyautogui.typewrite(['tab'])
-    pyautogui.write(f'O faturamento em {date.today()} foi de R${str(faturamento)}. O total de produtos vendidos foi de {str(qtd_vendas)} unidades.\n\n Atenciosamente, Myke Amorim.')
+    pyautogui.write(f'O faturamento em {date.today()} foi de R${str(faturamento)}. O total de produtos vendidos foi de {str(qtd_vendas)} unidades.\n\nAtenciosamente, Myke Amorim.')
     pyautogui.typewrite(['tab', 'enter'], interval=0.5)     # Clica no botão de envio.
 
 
