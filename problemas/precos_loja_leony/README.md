@@ -21,7 +21,7 @@ O programa deve retornar um valor inteiro, de valor mínimo 0, representando a q
 ---
 #### Exemplo:
 - ***Produtos*** = ["ovo", "monster", "durateston", "viagra"]
-- ***Preços dos produtos: *** = [50.0, 7.0, 400.0, 2.90]
+- ***Preços dos produtos:*** = [50.0, 7.0, 400.0, 2.90]
 - ***Produtos vendidos*** = ["viagra", "viagra", "viagra", "durateston", "monster"]
 - ***Preços dos produtos vendidos*** = [2.90, 2.90, 2900.0, 400.0, 50.0]
 - ***Retorno***: 2
