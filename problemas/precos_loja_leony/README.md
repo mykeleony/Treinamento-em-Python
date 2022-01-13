@@ -14,7 +14,7 @@ Seu trabalho é, a partir de uma lista de produtos, de uma lista dos preços des
 - **Produtos vendidos**: vetor de *strings*
 - **Preços dos produtos vendidos:** vetor de decimais
 
----
+
 #### Retorno
 O programa deve retornar um valor inteiro, de valor mínimo 0, representando a quantidade de erros presentes nos preços dos produtos vendidos.
 
