@@ -15,37 +15,43 @@ import webbrowser
 
 import pandas as pd
 
-pyautogui.PAUSE = 0.5
 
-webbrowser.open_new_tab('https://drive.google.com/drive/folders/14oLE59U1RqyRqlBbKpsyymW-mitvbtoh')
+def main():
+    pyautogui.PAUSE = 0.75
 
-time.sleep(5)
+    webbrowser.open_new_tab('https://drive.google.com/drive/folders/14oLE59U1RqyRqlBbKpsyymW-mitvbtoh')
 
-pyautogui.click(x=412, y=381)   # Seleciona o elemento do arquivo na pasta do drive.
-pyautogui.click(x=1161, y=184)  # Clica na select tag que contém o botão de download.
-pyautogui.click(x=922, y=622)   # Clica no botão de download do arquivo.
+    time.sleep(5)
 
-time.sleep(6)   # Espera a conclusão do download.
+    pyautogui.click(x=412, y=381)   # Seleciona o elemento do arquivo na pasta do drive.
+    pyautogui.click(x=1161, y=184)  # Clica na select tag que contém o botão de download.
+    pyautogui.click(x=922, y=622)   # Clica no botão de download do arquivo.
 
-with pd.ExcelFile(r'/home/linux/Downloads/Vendas - Dez.xlsx') as xlsl:
-    tabela = pd.read_excel(xlsl, usecols=['Quantidade', 'Valor Final'])     # Apenas as colunas "Quantidade" e "Valor Final" são relevantes.
+    time.sleep(6)   # Espera a conclusão do download.
 
-    # Cálculos:
-    faturamento = tabela['Valor Final'].sum()
-    qtd_vendas = tabela['Quantidade'].sum()
+    with pd.ExcelFile(r'/home/linux/Downloads/Vendas - Dez.xlsx') as xlsl:
+        tabela = pd.read_excel(xlsl, usecols=['Quantidade', 'Valor Final'])     # Apenas as colunas "Quantidade" e "Valor Final" são relevantes.
 
-# Envio do e-mail contendo as informações das vendas do dia:
-webbrowser.open_new_tab('https://mail.google.com/mail/u/0/#inbox')
+        # Cálculos:
+        faturamento = tabela['Valor Final'].sum()
+        qtd_vendas = tabela['Quantidade'].sum()
 
-time.sleep(6)
+    # Envio do e-mail contendo as informações das vendas do dia:
+    webbrowser.open_new_tab('https://mail.google.com/mail/u/0/#inbox')
 
-pyautogui.click(x=122, y=204)   # Abre a caixa de envio de e-mail no Gmail.
+    time.sleep(6)
 
-time.sleep(6)
+    pyautogui.click(x=122, y=204)   # Abre a caixa de envio de e-mail no Gmail.
 
-pyautogui.write('mykeleony147@gmail.com')
-pyautogui.typewrite(['tab', 'tab'], interval=0.5)
-pyautogui.write(f'Faturamento e quantidade de produtos vendidos em {date.today()}')     # Assunto do e-mail.
-pyautogui.typewrite(['tab'])
-pyautogui.write(f'O faturamento em {date.today()} foi de R${str(faturamento)}. O total de produtos vendidos foi de {str(qtd_vendas)} unidades.\n\n Atenciosamente, Myke Amorim.')
-pyautogui.typewrite(['tab', 'enter'], interval=0.5)     # Clica no botão de envio.
+    time.sleep(6)
+
+    pyautogui.write('mykeleony147@gmail.com')
+    pyautogui.typewrite(['tab', 'tab'], interval=0.5)
+    pyautogui.write(f'Faturamento e quantidade de produtos vendidos em {date.today()}')     # Assunto do e-mail.
+    pyautogui.typewrite(['tab'])
+    pyautogui.write(f'O faturamento em {date.today()} foi de R${str(faturamento)}. O total de produtos vendidos foi de {str(qtd_vendas)} unidades.\n\n Atenciosamente, Myke Amorim.')
+    pyautogui.typewrite(['tab', 'enter'], interval=0.5)     # Clica no botão de envio.
+
+
+if __name__ == '__main__':
+    main()
