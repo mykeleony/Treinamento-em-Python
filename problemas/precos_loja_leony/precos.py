@@ -28,4 +28,18 @@ def checa_precos(produtos, precos, vendidos, precos_vendidos):
             return len(vendidos)    # Lista de preços dos produtos vendidos vazia. Todos os itens vendidos são potenciais erros.
 
     return erros
-  
+
+
+def main():
+    print('Bem-vindo(a) ao detector de erros da loja Leony Shopping! Para verificar se houveram erros nas vendas dos produtos, siga as instruções: \n\n')
+
+    produtos = input('Digite os nomes dos produtos à venda separados por espaços: ').split()
+    precos = input('\nDigite os preços corretos desses produtos separados por espaços: ').split()
+    vendidos = input('\nDigite os nomes dos produtos vendidos separados por espaços: ').split()
+    precos_vendidos = input('\nDigite os preços cobrados por esses produtos separados por espaços: ').split()
+
+    print(f'\n{checa_precos(produtos, precos, vendidos, precos_vendidos)} itens foram vendidos pelo preço errado.')
+
+
+if __name__ == '__main__':
+    main()
