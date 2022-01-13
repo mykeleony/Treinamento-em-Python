@@ -19,5 +19,5 @@ Seu trabalho é, a partir de uma lista de produtos, de uma lista dos preços des
 O programa deve retornar um valor inteiro, de valor mínimo 0, representando a quantidade de erros presentes nos preços dos produtos vendidos.
 
 ---
-Leôncio *real* flagrado em um dia de trabalho: <br>
+Leôncio *real* flagrado em um dia de trabalho: <br><br>
 ![](https://64.media.tumblr.com/5731c343aa74224e94456ab33d3296d2/tumblr_oncldeerxw1w8m8sco1_400.jpg)
